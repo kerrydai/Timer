@@ -20,24 +20,26 @@ body {
   min-height: 100vh;
   margin: 0;
   background-image: url('image.jpg');
-  background-size: cover; /* or use "contain" to show full image */
-  background-position: center center; /* Focus on center */
+  background-size: cover;
+  background-position: center center;
   background-repeat: no-repeat;
   background-attachment: fixed;
   overflow: hidden;
+  position: relative; /* Ensures child elements are positioned correctly */
 }
 
-/* Add a semi-transparent overlay to improve text visibility */
+/* Ensure the overlay doesn't interfere with the image */
 body::before {
   content: "";
-  position: absolute;
+  position: fixed; /* Change to fixed to match background-attachment */
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.3); /* Adjust opacity as needed */
-  z-index: -1;
+  background-color: rgba(0, 0, 0, 0.3);
+  z-index: 0;
 }
+
 
 .container {
   text-align: center;
