@@ -1,48 +1,54 @@
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    color: #333;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
-  }
-  
-  .container {
-    text-align: center;
-  }
-  
-  h1 {
-    font-size: 3rem;
-    margin-bottom: 20px;
-  }
-  
-  #countdown {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-  }
-  
-  .time {
-    background-color: #333;
-    color: #fff;
-    padding: 20px;
-    border-radius: 10px;
-    text-align: center;
-    min-width: 100px;
-  }
-  
-  .time span {
-    display: block;
-  }
-  
-  #days, #hours, #minutes, #seconds {
-    font-size: 3rem;
-    font-weight: bold;
-  }
-  
-  .label {
-    font-size: 1rem;
-    margin-top: 5px;
-  }
+  font-family: Arial, sans-serif;
+  color: #fff; /* Change text color to white for better visibility */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-image: url('image.jpg'); /* Add your image as the background */
+  background-size: cover; /* Ensure the image covers the entire background */
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Prevent the image from repeating */
+}
+
+.container {
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.5); /* Add a semi-transparent background to the container for better readability */
+  padding: 20px;
+  border-radius: 10px;
+}
+
+h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+#countdown {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.time {
+  background-color: rgba(51, 51, 51, 0.8); /* Slightly transparent background for the timer */
+  color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  min-width: 100px;
+}
+
+.time span {
+  display: block;
+}
+
+#days, #hours, #minutes, #seconds {
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+.label {
+  font-size: 1rem;
+  margin-top: 5px;
+}
