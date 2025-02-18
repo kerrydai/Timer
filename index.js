@@ -1,6 +1,6 @@
 // index.js
 // Set your Spring Break date properly (YYYY, MM-1, DD)
-const springBreakDate = new Date(Date.UTC(2025, 2, 28)); // March 15, 2024 (months are 0-indexed)
+const springBreakDate = new Date(Date.UTC(2025, 1, 28)); // March 15, 2024 (months are 0-indexed)
 
 function updateCountdown() {
   const now = new Date().getTime();

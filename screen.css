@@ -61,11 +61,24 @@ body {
 h1 {
   font-size: 2.5rem;
   margin-bottom: 25px;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+  position: relative;
+}
+
+/* Gradient for text only */
+h1 .text {
   background: linear-gradient(45deg, #ff6b6b, #ff8e53);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
 }
+
+/* Regular emojis */
+h1 .emoji {
+  background: none; /* Remove gradient */
+  -webkit-text-fill-color: initial; /* Reset to default emoji color */
+  display: inline-block; /* Ensures emojis are treated as separate elements */
+}
+
 
 #countdown {
   display: flex;
