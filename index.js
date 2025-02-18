@@ -1,29 +1,47 @@
-// Set the date we're counting down to (February 28, 2025)
-const countDownDate = new Date("Feb 28, 2025 00:00:00").getTime();
+// index.js - Enhanced with particle animation
+const springBreakDate = new Date('March 15, 2024 00:00:00').getTime();
 
-// Update the countdown every second
-const countdownFunction = setInterval(() => {
-  // Get today's date and time
-  const now = new Date().getTime();
-
-  // Find the distance between now and the countdown date
-  const distance = countDownDate - now;
-
-  // Time calculations for days, hours, minutes, and seconds
-  const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-  const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-  const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-  const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-  // Display the result in the elements
-  document.getElementById("days").innerHTML = days;
-  document.getElementById("hours").innerHTML = hours;
-  document.getElementById("minutes").innerHTML = minutes;
-  document.getElementById("seconds").innerHTML = seconds;
-
-  // If the countdown is over, display a message
-  if (distance < 0) {
-    clearInterval(countdownFunction);
-    document.getElementById("countdown").innerHTML = "Spring Break is here! 🎉";
+// Create floating particles
+function createParticles() {
+  const container = document.querySelector('.floating-shapes');
+  for (let i = 0; i < 50; i++) {
+    const particle = document.createElement('div');
+    particle.style.position = 'absolute';
+    particle.style.left = Math.random() * 100 + '%';
+    particle.style.top = Math.random() * 100 + '%';
+    particle.style.width = particle.style.height = Math.random() * 4 + 2 + 'px';
+    particle.style.background = `rgba(255,${Math.random() * 100 + 155},${Math.random() * 100},0.7)`;
+    particle.style.borderRadius = '50%';
+    particle.style.animation = `float ${Math.random() * 10 + 10}s infinite linear`;
+    container.appendChild(particle);
   }
-}, 1000);
+}
+
+createParticles();
+
+// Existing countdown logic with added celebration effect
+function updateCountdown() {
+  const now = new Date().getTime();
+  const timeLeft = springBreakDate - now;
+
+  const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+  const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+  const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+
+  document.getElementById('days').textContent = days;
+  document.getElementById('hours').textContent = hours;
+  document.getElementById('minutes').textContent = minutes;
+  document.getElementById('seconds').textContent = seconds;
+
+  if (timeLeft < 0) {
+    clearInterval(countdownInterval);
+    document.getElementById('countdown').innerHTML = `
+      <h2 style="color: #ffd700; text-shadow: 0 0 20px #ffd700;">🎉 SPRING BREAK IS HERE! 🎉</h2>
+    `;
+    // Add celebration confetti
+    createParticles();
+  }
+}
+
+const countdownInterval = setInterval(updateCountdown, 1000);
