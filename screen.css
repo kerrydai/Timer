@@ -6,7 +6,7 @@ body {
   align-items: center;
   height: 100vh; /* Full viewport height */
   margin: 0;
-  background-image: url('image.png'); /* Add your image as the background */
+  background-image: url('image.jpg'); /* Add your image as the background */
   background-size: cover; /* Ensures the image covers the entire background */
   background-position: center; /* Centers the image */
   background-repeat: no-repeat; /* Prevents the image from repeating */
