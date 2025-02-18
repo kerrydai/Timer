@@ -1,20 +1,21 @@
 body {
   font-family: Arial, sans-serif;
-  color: #fff; /* Change text color to white for better visibility */
+  color: #fff; /* White text for better visibility */
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  height: 100vh; /* Full viewport height */
   margin: 0;
-  background-image: url('image.jpg'); /* Add your image as the background */
-  background-size: cover; /* Ensure the image covers the entire background */
-  background-position: center; /* Center the image */
-  background-repeat: no-repeat; /* Prevent the image from repeating */
+  background-image: url('image.png'); /* Add your image as the background */
+  background-size: cover; /* Ensures the image covers the entire background */
+  background-position: center; /* Centers the image */
+  background-repeat: no-repeat; /* Prevents the image from repeating */
+  background-attachment: fixed; /* Ensures the image stays fixed while scrolling */
 }
 
 .container {
   text-align: center;
-  background-color: rgba(0, 0, 0, 0.5); /* Add a semi-transparent background to the container for better readability */
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background for better readability */
   padding: 20px;
   border-radius: 10px;
 }
@@ -22,6 +23,7 @@ body {
 h1 {
   font-size: 3rem;
   margin-bottom: 20px;
+  color: #ff0000; /* Red color for the heading */
 }
 
 #countdown {
@@ -31,8 +33,7 @@ h1 {
 }
 
 .time {
-  background-color: rgba(51, 51, 51, 0.8); /* Slightly transparent background for the timer */
-  color: #fff;
+  background-color: rgba(255, 255, 255, 0.2); /* Semi-transparent white background for the timer */
   padding: 20px;
   border-radius: 10px;
   text-align: center;
@@ -43,6 +44,22 @@ h1 {
   display: block;
 }
 
+#days {
+  color: #ff0000; /* Red color for days */
+}
+
+#hours {
+  color: #0000ff; /* Blue color for hours */
+}
+
+#minutes {
+  color: #ff0000; /* Red color for minutes */
+}
+
+#seconds {
+  color: #0000ff; /* Blue color for seconds */
+}
+
 #days, #hours, #minutes, #seconds {
   font-size: 3rem;
   font-weight: bold;
@@ -51,4 +68,5 @@ h1 {
 .label {
   font-size: 1rem;
   margin-top: 5px;
+  color: #fff; /* White color for labels */
 }
