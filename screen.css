@@ -18,13 +18,13 @@ body {
   align-items: center;
   min-height: 100vh;
   margin: 0;
-  background-image: 
-    linear-gradient(45deg, rgba(255,0,100,0.2), rgba(0,100,255,0.2)),
-    url('image.jpg');
-  background-size: cover;
+  background-image: url('image.jpg');
+  background-size: contain;
   background-position: center;
-  background-blend-mode: multiply;
-  overflow: hidden;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-color: #000;
+  overflow: auto;
   position: relative;
 }
 
@@ -33,8 +33,8 @@ body {
   width: 100vw;
   height: 100vh;
   background: 
-    radial-gradient(circle at 20% 80%, #ff6b6b 0%, transparent 15%),
-    radial-gradient(circle at 80% 20%, #4ecdc4 0%, transparent 15%);
+    radial-gradient(circle at 20% 80%, rgba(255,107,107,0.2) 0%, transparent 15%),
+    radial-gradient(circle at 80% 20%, rgba(78,205,196,0.2) 0%, transparent 15%);
   animation: float 20s infinite linear;
   z-index: 0;
 }
@@ -46,15 +46,16 @@ body {
 
 .container {
   text-align: center;
-  background: rgba(0, 0, 0, 0.6);
+  background: rgba(0, 0, 0, 0.7);
   padding: 30px 40px;
   border-radius: 20px;
-  backdrop-filter: blur(10px);
+  backdrop-filter: blur(5px);
   border: 2px solid rgba(255,255,255,0.1);
   box-shadow: 0 0 30px rgba(255,69,0,0.3);
   max-width: 90%;
   z-index: 2;
   position: relative;
+  margin: 20px;
 }
 
 h1 {
@@ -69,15 +70,16 @@ h1 {
 #countdown {
   display: flex;
   justify-content: center;
-  gap: 25px;
+  gap: 15px;
   margin: 30px 0;
+  flex-wrap: wrap;
 }
 
 .time {
   background: linear-gradient(145deg, rgba(255,107,107,0.3), rgba(78,205,196,0.3));
-  padding: 25px;
+  padding: 20px;
   border-radius: 15px;
-  min-width: 120px;
+  min-width: 100px;
   transition: transform 0.3s ease;
   box-shadow: 0 4px 15px rgba(255,105,180,0.2);
 }
@@ -92,41 +94,21 @@ h1 {
 #seconds { color: #6c5ce7; }
 
 #days, #hours, #minutes, #seconds {
-  font-size: 3.5rem;
+  font-size: 3rem;
   font-weight: 800;
   text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
 }
 
 .label {
-  font-size: 1.1rem;
+  font-size: 1rem;
   color: rgba(255,255,255,0.9);
   letter-spacing: 1px;
+  margin-top: 8px;
 }
 
 .motd {
   margin-top: 25px;
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   color: #ffd700;
   text-shadow: 0 0 10px rgba(255,215,0,0.5);
-}
-
-.social-links {
-  position: fixed;
-  bottom: 30px;
-  display: flex;
-  gap: 20px;
-}
-
-.social-icon {
-  color: white;
-  padding: 10px 20px;
-  border-radius: 25px;
-  background: linear-gradient(45deg, #6c5ce7, #ff6b6b);
-  text-decoration: none;
-  transition: all 0.3s ease;
-}
-
-.social-icon:hover {
-  transform: scale(1.1);
-  box-shadow: 0 0 15px rgba(108,92,231,0.5);
 }
