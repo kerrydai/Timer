@@ -1,4 +1,48 @@
-/* Add screen styles below */
-a.active {
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+  }
+  
+  .container {
+    text-align: center;
+  }
+  
+  h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+  }
+  
+  #countdown {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .time {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    min-width: 100px;
+  }
+  
+  .time span {
+    display: block;
+  }
+  
+  #days, #hours, #minutes, #seconds {
+    font-size: 3rem;
     font-weight: bold;
-}
+  }
+  
+  .label {
+    font-size: 1rem;
+    margin-top: 5px;
+  }
