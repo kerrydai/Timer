@@ -6,7 +6,7 @@ body {
   align-items: center;
   height: 100vh; /* Full viewport height */
   margin: 0;
-  background-image: url('image.jpg'); /* Add your image as the background */
+  background-image: url('image.jpg'); /* Updated to image.jpg */
   background-size: cover; /* Ensures the image covers the entire background */
   background-position: center; /* Centers the image */
   background-repeat: no-repeat; /* Prevents the image from repeating */
@@ -23,7 +23,7 @@ body {
 h1 {
   font-size: 3rem;
   margin-bottom: 20px;
-  color: #ff0000; /* Red color for the heading */
+  color: #ff6666; /* Lighter red color for the heading */
 }
 
 #countdown {
@@ -45,19 +45,19 @@ h1 {
 }
 
 #days {
-  color: #ff0000; /* Red color for days */
+  color: #ff6666; /* Lighter red color for days */
 }
 
 #hours {
-  color: #0000ff; /* Blue color for hours */
+  color: #6666ff; /* Lighter blue color for hours */
 }
 
 #minutes {
-  color: #ff0000; /* Red color for minutes */
+  color: #ff6666; /* Lighter red color for minutes */
 }
 
 #seconds {
-  color: #0000ff; /* Blue color for seconds */
+  color: #6666ff; /* Lighter blue color for seconds */
 }
 
 #days, #hours, #minutes, #seconds {
